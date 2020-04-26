@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Sheep Example/ECS Move.unity
+    guid: cd67d51c96802ec46bae640b7e137a30
   m_configObjects: {}

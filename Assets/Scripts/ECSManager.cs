@@ -28,7 +28,7 @@ public class ECSManager : MonoBehaviour
             var instance = entityManager.Instantiate(prefabEntity);
 
             // Creates a random point in 3D space. We are using a float3 becuase it is a structure compared to Vecto3 which is a class
-            var position = transform.TransformPoint(new float3(UnityEngine.Random.Range(-50, 50), 0, UnityEngine.Random.Range(-50, 50)));
+            var position = transform.TransformPoint(new float3(UnityEngine.Random.Range(-100, 100), 0, UnityEngine.Random.Range(-100, 100)));
 
             // Adding a new Translation component to entity with a value of the position variable we initialized above
             entityManager.SetComponentData(instance, new Translation { Value = position });

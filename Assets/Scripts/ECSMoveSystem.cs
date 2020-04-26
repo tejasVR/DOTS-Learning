@@ -17,10 +17,10 @@ public class ECSMoveSystem : JobComponentSystem
             // ForEach gets all entities with specific components
             .ForEach((ref Translation position, ref Rotation rotation) =>
             {
-                position.Value += 0.008F * math.forward(rotation.Value);
-                if (position.Value.z > 50)
+                position.Value += 0.05F * math.forward(rotation.Value);
+                if (position.Value.z > 100)
                 {
-                    position.Value.z = -50;
+                    position.Value.z = -100;
                 }
             })
 

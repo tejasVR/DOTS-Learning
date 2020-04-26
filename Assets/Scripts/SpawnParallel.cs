@@ -17,7 +17,7 @@ public class SpawnParallel : MonoBehaviour
         public void Execute(int index, TransformAccess transformAccess)
         {
             // We are changing the position of an object by the Z-forward axis of the corresponding object
-            transformAccess.position += 0.08F * (transformAccess.rotation * new Vector3(0, 0, 1));
+            transformAccess.position += 0.05F * (transformAccess.rotation * new Vector3(0, 0, 1));
 
             // Re-position the object when is moves passed a certain Z-value
             if (transformAccess.position.z > 50F)
