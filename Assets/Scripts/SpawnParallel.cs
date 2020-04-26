@@ -32,7 +32,6 @@ public class SpawnParallel : MonoBehaviour
     TransformAccessArray transforms; // Need to declare a TransformAccessArray 
 
     Transform[] allSheepTransform;
-    //private GameObject[] allSheep = new GameObject[numSheep];
 
     void Start()
     {
@@ -72,5 +71,4 @@ public class SpawnParallel : MonoBehaviour
         // We are working with native code, so we need to manually dispose job in memory
         transforms.Dispose();
     }
-
 }
