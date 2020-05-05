@@ -1,5 +1,0 @@
-sceneSetups:
-- path: Assets/Scenes/Sheep Example/ECS Move.unity
-  isLoaded: 1
-  isActive: 1
-  isSubScene: 0
