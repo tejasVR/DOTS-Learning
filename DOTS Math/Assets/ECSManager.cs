@@ -11,7 +11,6 @@ public class ECSManager : MonoBehaviour
     public GameObject tankPrefab;
     const int numTanks = 500;
 
-    // Start is called before the first frame update
     void Start()
     {
         manager = World.DefaultGameObjectInjectionWorld.EntityManager;
@@ -25,6 +24,12 @@ public class ECSManager : MonoBehaviour
             float z = UnityEngine.Random.Range(-100, 100);
             var position = transform.TransformPoint(new float3(x, 0, z));
             manager.SetComponentData(instance, new Translation { Value = position });
+
+            // Assign a quaternion and convert traditional Euler degrees
+            var q = Quaternion.Euler(new Vector3(0, 45, 0));
+
+            // Gives our entity a starting rotation, wher the rotation value is in quaternion
+            manager.SetComponentData(instance, new Rotation { Value = new quaternion(q.x, q.y, q.z, q.w) });
         }
 
     }
