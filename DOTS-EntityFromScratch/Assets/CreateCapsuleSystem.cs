@@ -23,7 +23,7 @@ public class CreateCapsuleSystem : JobComponentSystem
         EntityManager.SetComponentData(instance,
             new LocalToWorld
             {
-                Value = new float4x4(rotation: quaternion.identity, translation: new float3(0, 0, 0))
+                Value = new float4x4(rotation: quaternion.identity, translation: new float3(10, 3, 10))
             });
 
         // gets the ResourceLoader script from the ResourceLoader GameObject in our Resources folder
